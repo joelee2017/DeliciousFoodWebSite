@@ -3,27 +3,58 @@
 <head>
     <meta charset="utf-8" />
     <title>Logon</title>
-     <style>
-         * {
-             margin: 0;
-             padding: 0;
-         }
-         .login1 {
-             width: 100%;
-         }
-         .image1{
-             width:150px;
-         }
-         table {
-             margin:auto;
-             line-height: 45px;
-             text-align: center;
-         }
-         td{
-             
-         }
-          
-     </style>
+    <script src="Scripts/jquery-3.2.1.js"></script>
+    <script src="Scripts/jquery-3.2.1.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .login1 {
+            width: 100%;
+        }
+
+        .image1 {
+            width: 150px;
+        }
+
+        table {
+            margin: auto;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        td {
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#LoginChange").on("click", function () {
+                if ($(".Account").first().css("display") == "none") {
+
+                    $(".Account").css("display", "")
+                }
+                else {
+
+                    $(".Account").css("display", "none") ;
+                }
+
+
+            });
+            function showStuff() {
+
+                //if (document.getElementsByClassName("Account")[0].style.display == "block") {
+                //    document.getElementsByClassName("Account").style.display = "none";
+                //}
+                //else {
+
+                //    document.getElementsByClassName("Account").style.display = "block";
+                //}
+            }
+
+        });
+    </script>
 </head>
 <body>
     <div class="login1">
@@ -46,9 +77,19 @@
                 </td>
             </tr>
             <tr>
-                <td>或用 Email 登入 / 註冊</td>
+                <td id="LoginChange">或用 Email 登入 / 註冊</td>
             </tr>
-            <tr>
+            <tr class="Account">
+                <td>帳號：<input type="text" /> </td>                
+            </tr>
+            <tr class="Account">
+                <td>密碼：<input type="text" /> </td>
+            </tr>
+            <tr class="Account">
+                <td><input type="button" value="登入"/></td>
+            </tr>
+            
+            <tr class="Account">
                 <td>用愛料理 App 看螢幕做菜不變暗</td>
             </tr>
             <tr>
